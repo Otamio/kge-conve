@@ -6,6 +6,9 @@ saved_models
 countries
 
 data/
+/data/
+/datasets/
+/.idea/
 
 create_fb15k-237c.py
 
