@@ -3,6 +3,7 @@ from tqdm import tqdm
 import argparse
 import pandas as pd
 from pathlib import Path
+import os
 
 
 parser = argparse.ArgumentParser(
@@ -14,7 +15,7 @@ args = parser.parse_args()
 
 
 # Load vocab
-vocab = np.load(f'{str(Path.home())}/.data/{args.dataset}/vocab_e1', allow_pickle=True)
+vocab = np.load(f"{str(Path.home())}/{os.environ['OUTPUT']}/{args.dataset}/vocab_e1", allow_pickle=True)
 
 ent2idx = vocab[0]
 idx2ent = vocab[1]
